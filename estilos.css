@@ -1,0 +1,620 @@
+/* ============================================
+   EUGENIA COSAMA — ASESORA DE IMAGEN
+   Hoja de estilos principal
+   ============================================ */
+
+/* --- 1. VARIABLES DE COLOR ---
+   Definimos los colores una sola vez aquí.
+   Así, si quieres cambiar el verde mañana,
+   solo tocas esta línea y cambia en TODA la web. */
+:root {
+  --verde-principal: #4a5d4a;
+  --verde-claro: #7a9479;
+  --verde-suave: #e8ede6;
+  --crema: #f7f4ef;
+  --beige: #ede7dc;
+  --texto-oscuro: #2e2e2a;
+  --texto-suave: #6b6b63;
+  --blanco: #ffffff;
+  --sombra: rgba(46, 46, 42, 0.08);
+}
+
+/* --- 2. RESET BÁSICO ---
+   Los navegadores traen márgenes/paddings por defecto
+   que varían entre ellos. Los igualamos a cero
+   para tener control total desde cero. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: var(--crema);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- 3. CABECERA / NAVEGACIÓN --- */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 6%;
+  background-color: var(--crema);
+  border-bottom: 1px solid var(--beige);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: var(--verde-principal);
+}
+
+.logo span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  margin-top: 2px;
+}
+
+.menu {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.menu a {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--texto-oscuro);
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.activo {
+  color: var(--verde-principal);
+  border-bottom: 1px solid var(--verde-principal);
+}
+
+/* Menú hamburguesa (para móvil) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 2px;
+  background-color: var(--verde-principal);
+}
+
+/* --- 4. HERO (sección principal de portada) --- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+  padding: 4rem 6%;
+  background: linear-gradient(180deg, var(--crema) 0%, var(--verde-suave) 100%);
+}
+
+.hero-contenido {
+  max-width: 700px;
+}
+
+.hero-etiqueta {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+  margin-bottom: 1.2rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--verde-principal);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--texto-suave);
+  margin-bottom: 2.2rem;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- 5. BOTONES --- */
+.boton {
+  display: inline-block;
+  padding: 0.95rem 2.4rem;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--verde-principal);
+}
+
+.boton-relleno {
+  background-color: var(--verde-principal);
+  color: var(--blanco);
+}
+
+.boton-relleno:hover {
+  background-color: var(--texto-oscuro);
+  border-color: var(--texto-oscuro);
+}
+
+.boton-contorno {
+  background-color: transparent;
+  color: var(--verde-principal);
+}
+
+.boton-contorno:hover {
+  background-color: var(--verde-principal);
+  color: var(--blanco);
+}
+
+/* --- 6. SECCIONES GENERALES --- */
+.seccion {
+  padding: 5.5rem 6%;
+}
+
+.seccion-titulo {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.seccion-etiqueta {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.seccion-titulo h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.seccion-titulo p {
+  color: var(--texto-suave);
+}
+
+.fondo-beige {
+  background-color: var(--beige);
+}
+
+.fondo-verde {
+  background-color: var(--verde-suave);
+}
+
+/* --- 7. TARJETAS (pilares / servicios) --- */
+.rejilla-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  background-color: var(--blanco);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px var(--sombra);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+}
+
+.tarjeta-numero {
+  font-size: 0.85rem;
+  color: var(--verde-claro);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.tarjeta h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.9rem;
+  color: var(--verde-principal);
+}
+
+.tarjeta p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+/* --- 8. SERVICIOS (lista detallada) --- */
+.servicio-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 5rem auto;
+}
+
+.servicio-fila.invertido {
+  direction: rtl;
+}
+
+.servicio-fila.invertido > * {
+  direction: ltr;
+}
+
+.servicio-imagen {
+  background-color: var(--beige);
+  border-radius: 4px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.servicio-texto span.etiqueta {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+}
+
+.servicio-texto h3 {
+  font-size: 1.7rem;
+  margin: 0.7rem 0 1.1rem 0;
+  color: var(--texto-oscuro);
+}
+
+.servicio-texto p {
+  color: var(--texto-suave);
+  margin-bottom: 1.3rem;
+}
+
+.servicio-texto ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.servicio-texto ul li {
+  padding-left: 1.6rem;
+  position: relative;
+  margin-bottom: 0.6rem;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.servicio-texto ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--verde-claro);
+}
+
+/* --- 9. SOBRE MÍ --- */
+.sobre-mi-rejilla {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sobre-mi-imagen {
+  background-color: var(--beige);
+  border-radius: 4px;
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sobre-mi-texto p {
+  margin-bottom: 1.1rem;
+  color: var(--texto-suave);
+}
+
+.valores-lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.valor-item {
+  border-left: 2px solid var(--verde-claro);
+  padding-left: 1rem;
+}
+
+.valor-item strong {
+  display: block;
+  color: var(--verde-principal);
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.valor-item span {
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+}
+
+/* --- 10. CITA / FRASE DESTACADA --- */
+.cita {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5rem 6%;
+}
+
+.cita p {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--verde-principal);
+  line-height: 1.5;
+}
+
+.cita span {
+  display: block;
+  margin-top: 1.3rem;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  font-style: normal;
+}
+
+/* --- 11. CONTACTO --- */
+.contacto-rejilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contacto-info h3 {
+  color: var(--verde-principal);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contacto-dato {
+  margin-bottom: 1.6rem;
+}
+
+.contacto-dato span.etq {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+  margin-bottom: 0.3rem;
+}
+
+.contacto-dato p, .contacto-dato a {
+  color: var(--texto-oscuro);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  margin-bottom: 0.5rem;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--beige);
+  background-color: var(--blanco);
+  font-family: inherit;
+  font-size: 0.95rem;
+  border-radius: 2px;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--verde-claro);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* --- 12. CTA FINAL (llamada a la acción) --- */
+.cta-final {
+  text-align: center;
+  padding: 5rem 6%;
+  background-color: var(--verde-principal);
+  color: var(--blanco);
+}
+
+.cta-final h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-final p {
+  margin-bottom: 2rem;
+  opacity: 0.85;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-final .boton-relleno {
+  background-color: var(--blanco);
+  color: var(--verde-principal);
+  border-color: var(--blanco);
+}
+
+.cta-final .boton-relleno:hover {
+  background-color: var(--crema);
+}
+
+/* --- 13. PIE DE PÁGINA --- */
+.pie {
+  padding: 3.5rem 6% 2rem 6%;
+  background-color: var(--texto-oscuro);
+  color: var(--beige);
+}
+
+.pie-rejilla {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.pie h4 {
+  color: var(--blanco);
+  font-size: 1rem;
+  margin-bottom: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.pie p, .pie a {
+  font-size: 0.9rem;
+  color: var(--beige);
+  opacity: 0.75;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.pie a:hover {
+  opacity: 1;
+}
+
+.pie-abajo {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.8rem;
+  opacity: 0.55;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- 14. RESPONSIVE (adaptación a móvil) ---
+   @media activa estos estilos SOLO cuando
+   la pantalla mide 768px o menos (tablets/móviles) */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--crema);
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .menu.abierto {
+    display: flex;
+  }
+
+  .menu li {
+    padding: 1rem 6%;
+    border-top: 1px solid var(--beige);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .rejilla-3,
+  .servicio-fila,
+  .servicio-fila.invertido,
+  .sobre-mi-rejilla,
+  .contacto-rejilla {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .servicio-fila.invertido .servicio-imagen {
+    order: -1;
+  }
+
+  .pie-rejilla {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .valores-lista {
+    grid-template-columns: 1fr;
+  }
+}

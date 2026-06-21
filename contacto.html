@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Eugenia Cosama</title>
+  <meta name="description" content="Contacta a Eugenia Cosama para agendar tu sesión de asesoría de imagen, taller formativo o consultoría de protocolo social.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <a href="index.html" class="logo">
+      Eugenia Cosama
+      <span>Imagen &amp; Protocolo</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="menu" id="menuPrincipal">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="sobre-mi.html">Sobre mí</a></li>
+      <li><a href="contacto.html" class="activo">Contacto</a></li>
+    </ul>
+  </header>
+
+  <section class="seccion">
+    <div class="seccion-titulo">
+      <span class="seccion-etiqueta">Contacto</span>
+      <h2>Hablemos de tu proceso</h2>
+      <p>Cuéntame qué buscas y te responderé personalmente para encontrar el mejor punto de partida.</p>
+    </div>
+
+    <div class="contacto-rejilla">
+      <div class="contacto-info">
+        <h3>Información de contacto</h3>
+
+        <div class="contacto-dato">
+          <span class="etq">Correo</span>
+          <a href="mailto:hola@eugeniacosama.com">hola@eugeniacosama.com</a>
+        </div>
+
+        <div class="contacto-dato">
+          <span class="etq">Teléfono / WhatsApp</span>
+          <p>+34 600 000 000</p>
+        </div>
+
+        <div class="contacto-dato">
+          <span class="etq">Ubicación</span>
+          <p>Murcia, España — sesiones presenciales y online</p>
+        </div>
+
+        <div class="contacto-dato">
+          <span class="etq">Redes sociales</span>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+
+      <form class="formulario" id="formularioContacto">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="campo">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="campo">
+          <label for="servicio">Me interesa</label>
+          <input type="text" id="servicio" name="servicio" placeholder="Asesoría / Taller / Protocolo">
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+        <button type="submit" class="boton boton-relleno" style="border: none; cursor: pointer;">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <div class="pie-rejilla">
+      <div>
+        <h4>Eugenia Cosama</h4>
+        <p>Asesora de imagen personal y protocolo social, enfocada en formar y educar, no solo en asesorar.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="mailto:hola@eugeniacosama.com">hola@eugeniacosama.com</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="pie-abajo">
+      © 2026 Eugenia Cosama. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>
